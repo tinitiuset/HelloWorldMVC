@@ -6,7 +6,8 @@
 package grupo910.reto0mvc.application;
 
 /**
- *This is the application class for the hello world MVC app.
+ * This is the application class for the hello world MVC app.
+ * This is a new comment on the dev_martin Branch.
  * @author 2dam
  */
 public class Application {
