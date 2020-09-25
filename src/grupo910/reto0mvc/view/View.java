@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package grupo910.reto0mvc.application;
+package grupo910.reto0mvc.view;
 
 /**
  *
  * @author Martin Valiente Ainz
  * 
- * Contains the get methods to be used by a model.
+ * Contains view methods to be used by a controller.
  * 
  */
-public interface Model {
+public interface View {
     /**
-     * Gets the greeting from the Database.
-     * @param greeting A String containing the greeting.
+     * Shows a greeting in UI.
+     * @param greeting A String containing the greeting to be shown.
      */
-    public void getGreeting(String greeting);
+    public void showGreeting (String greeting);
 }
