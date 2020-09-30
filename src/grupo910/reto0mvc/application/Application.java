@@ -8,6 +8,7 @@ package grupo910.reto0mvc.application;
 import grupo910.reto0mvc.controller.Controller;
 import grupo910.reto0mvc.model.ModelFactory;
 import grupo910.reto0mvc.view.ViewFactory;
+import java.util.ResourceBundle;
 
 /**
  * This is the application class for the hello world MVC app.
@@ -16,6 +17,8 @@ import grupo910.reto0mvc.view.ViewFactory;
  * @author Martin Valiente and Kerman Rodriguez.
  */
 public class Application {
+    
+    
 
     /**
      * This Class will launch the Application.
@@ -25,15 +28,27 @@ public class Application {
      * and the model as parameters.
      * @param args the command line arguments
      */
+       
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        ResourceBundle configFile;
+        String viewOption;
+        String modelOption;
+        
+        configFile = ResourceBundle.getBundle("grupo910.reto0mvc.application.config");
+        viewOption = configFile.getString("Layout");
+        modelOption = configFile.getString("Model");
+        
+        int chosenView = Integer.parseInt(viewOption);
+        int chosenModel = Integer.parseInt(modelOption);
+        
         ViewFactory view = new ViewFactory();
         
         ModelFactory model = new ModelFactory();
         
         Controller controller = new Controller();
         
-        controller.run(view.getView(), model.getModel());
+        controller.run(view.getView(chosenView), model.getModel(chosenModel));
     }
     
 }

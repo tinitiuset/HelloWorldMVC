@@ -11,7 +11,10 @@ package grupo910.reto0mvc.model;
  */
 public class ModelFactory {
     
-     public Model getModel(){
-        return new ModelImplementation();
+     public Model getModel(int option){
+         if (option==1)
+            return new ModelImplementation();
+         else
+             return new ModelImplementation();
     }
 }

@@ -11,7 +11,10 @@ package grupo910.reto0mvc.view;
  */
 public class ViewFactory {
     
-    public View getView(){
-        return new ViewImplementation();
+    public View getView(int option){
+        if (option==1)
+            return new ViewImplementation();
+        else
+            return new SwingViewImplementation();
     }
 }
