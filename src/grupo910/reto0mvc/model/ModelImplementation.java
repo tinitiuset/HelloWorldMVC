@@ -9,12 +9,14 @@ package grupo910.reto0mvc.model;
  * Model implementation for getting the greeting from a properties file.
  * @author Martin Valiente Ainz
  */
-public class ModelImplementation {
+public class ModelImplementation implements Model {
     /**
      * 
-     * @return 
+     * @return Returns the greeting.
      */
-    public String getGreeting(){
-       return greeting; 
+    @Override
+    public String getGreeting() {
+        String greeting = "Fortnite la Hostia";
+        return greeting;
     }
 }
