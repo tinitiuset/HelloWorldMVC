@@ -5,6 +5,10 @@
  */
 package grupo910.reto0mvc.model;
 
+import grupo910.reto0mvc.database.DAO;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Model implementation for getting the greeting from a properties file.
  * @author Martin Valiente Ainz
@@ -16,7 +20,13 @@ public class ModelImplementation implements Model {
      */
     @Override
     public String getGreeting() {
-        String greeting = "Fortnite la Hostia";
+        DAO dao = new DAO();
+        String greeting = null;
+        try {
+            greeting = dao.selectGreeting();
+        } catch (Exception ex) {
+            Logger.getLogger(ModelImplementation.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return greeting;
     }
 }
