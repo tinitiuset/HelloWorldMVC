@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package grupo910.reto0mvc.database;
 
 import java.sql.Connection;
@@ -14,8 +10,8 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 /**
- *
- * @author 2dam
+ * Class that manages the database using different methods.
+ * @author Kerman Rodríguez and Martín Valiente
  */
 public class DAO {
      // Attributes
@@ -43,7 +39,10 @@ public class DAO {
         this.greeting = this.configFile.getString("Greeting");
         chosen_greeting = Integer.parseInt(greeting);
     }
-
+    /**
+     * Method to start the connection to the database
+     * @throws Exception 
+     */
     private void connect() throws Exception {
         try {
             Class.forName(this.driverBD);
@@ -53,7 +52,10 @@ public class DAO {
             throw new Exception("SQL error" + e.getMessage());
         }
     }
-
+    /**
+     * Method to stop the connection to the database
+     * @throws Exception 
+     */
     private void disconnect() throws Exception {
         try {
             if (stmt != null) {
@@ -66,7 +68,11 @@ public class DAO {
             throw new Exception("SQL error" + e.getMessage());
         }
     }
-    
+     /**
+      * A simple method that searches the database for the greeting
+      * @return the needed greeting
+      * @throws Exception 
+      */
      public String selectGreeting() throws Exception {
         String selected_greeting = "";
         this.connect();

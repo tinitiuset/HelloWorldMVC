@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grupo910.reto0mvc.view;
 
 /**
@@ -10,7 +5,11 @@ package grupo910.reto0mvc.view;
  * @author 2dam
  */
 public class ViewFactory {
-
+    /**
+     * Method that returns a ViewImplementation for the use of the app
+     * @param option to choose if you want a text, Swing or JavaFX window
+     * @return the implementation of the view (text, Swing or JavaFX) 
+     */
     public View getView(int option) {
         switch (option) {
             case 1:

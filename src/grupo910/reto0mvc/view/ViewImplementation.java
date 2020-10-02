@@ -6,7 +6,7 @@
 package grupo910.reto0mvc.view;
 
 /**
- * @author Martin Valiente Ainz
+ * @author Martin Valiente and Kerman Rodríguez
  * View implementation that shows the greeting in a text type UI.
  */
 public class ViewImplementation implements View{

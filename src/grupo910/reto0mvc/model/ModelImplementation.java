@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grupo910.reto0mvc.model;
 
 import grupo910.reto0mvc.database.DAO;
@@ -11,11 +6,11 @@ import java.util.logging.Logger;
 
 /**
  * Model implementation for getting the greeting from a properties file.
- * @author Martin Valiente Ainz
+ * @author Martin Valiente and Kerman Rodríguez
  */
 public class ModelImplementation implements Model {
     /**
-     * 
+     * Method that gets the greeting from the database
      * @return Returns the greeting.
      */
     @Override

@@ -12,8 +12,6 @@ import java.util.ResourceBundle;
 
 /**
  * This is the application class for the hello world MVC app.
- * This is a new comment on the dev_martin Branch.
- * This is the third comment on the dev_main Branch.
  * @author Martin Valiente and Kerman Rodriguez.
  */
 public class Application {
@@ -22,7 +20,9 @@ public class Application {
 
     /**
      * This Class will launch the Application.
-     * It instances a ViewFactory, ModelFactory
+     * First, it gets the needed parametres from
+     * our config file. 
+     * Then, it instances a ViewFactory, ModelFactory
      * and Controller and then calls the run
      * method on Controller and passes the view 
      * and the model as parameters.

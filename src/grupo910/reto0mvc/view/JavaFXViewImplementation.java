@@ -27,7 +27,7 @@ public class JavaFXViewImplementation extends Application implements View {
     public void start(Stage primaryStage) {
 
         lbl = new Label();
-        lbl.setText("aaa");
+        
 
         StackPane root = new StackPane();
         root.getChildren().add(lbl);
@@ -46,7 +46,5 @@ public class JavaFXViewImplementation extends Application implements View {
     @Override
     public void showGreeting(String greeting) {
         launch();
-        lbl.setText(greeting);
-
     }
 }
