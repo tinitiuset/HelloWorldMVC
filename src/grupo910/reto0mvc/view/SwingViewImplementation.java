@@ -6,8 +6,8 @@
 package grupo910.reto0mvc.view;
 
 /**
- * Class that opens the graphical view of the project
- * @author 2dam
+ * Class that opens the graphical view of the project using Swing
+ * @author Martin Valiente and Kerman Rodriguez
  */
 public class SwingViewImplementation extends javax.swing.JFrame implements View{
     /**
