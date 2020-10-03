@@ -6,11 +6,14 @@ import java.util.logging.Logger;
 
 /**
  * Model implementation for getting the greeting from a properties file.
+ *
  * @author Martin Valiente and Kerman Rodríguez
  */
 public class ModelImplementation implements Model {
+
     /**
      * Method that gets the greeting from the database
+     *
      * @return Returns the greeting.
      */
     @Override
