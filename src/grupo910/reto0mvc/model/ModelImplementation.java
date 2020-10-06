@@ -1,13 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package grupo910.reto0mvc.model;
 
-import grupo910.reto0mvc.database.DAO;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
- * Model implementation for getting the greeting from a properties file.
  *
- * @author Martin Valiente and Kerman Rodríguez
+ * @author TINI
  */
 public class ModelImplementation implements Model {
 
@@ -18,13 +18,8 @@ public class ModelImplementation implements Model {
      */
     @Override
     public String getGreeting() {
-        DAO dao = new DAO();
-        String greeting = null;
-        try {
-            greeting = dao.selectGreeting();
-        } catch (Exception ex) {
-            Logger.getLogger(ModelImplementation.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        String greeting;
+        greeting = "Hola Mundo";
         return greeting;
     }
 }

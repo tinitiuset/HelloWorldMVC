@@ -17,7 +17,7 @@ public class ModelFactory {
         if (option == 1) {
             return new ModelImplementation();
         } else {
-            return new ModelImplementation();
+            return new DaoModelImplementation();
         }
     }
 }

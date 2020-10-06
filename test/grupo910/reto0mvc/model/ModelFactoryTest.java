@@ -61,7 +61,7 @@ public class ModelFactoryTest {
                     break;
                 case 2:
                     result = instance.getModel(option);
-                    expResult = new ModelImplementation();
+                    expResult = new DaoModelImplementation();
                     assertEquals(result.getClass(), expResult.getClass());
                     break;
                 default:
