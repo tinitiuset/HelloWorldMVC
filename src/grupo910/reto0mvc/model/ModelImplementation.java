@@ -12,7 +12,7 @@ package grupo910.reto0mvc.model;
 public class ModelImplementation implements Model {
 
     /**
-     * Method that gets the greeting from the database
+     * Method that gets the greeting from a String
      *
      * @return Returns the greeting.
      */
