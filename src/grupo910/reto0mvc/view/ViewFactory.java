@@ -1,8 +1,8 @@
 package grupo910.reto0mvc.view;
 
 /**
- *
- * @author 2dam
+ * Class used to create the view objects.
+ * @author Kerman Rodríguez and Martín Valiente
  */
 public class ViewFactory {
     /**

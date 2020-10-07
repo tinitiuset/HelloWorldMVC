@@ -1,10 +1,9 @@
 package grupo910.reto0mvc.model;
 
 /**
- *
- * @author Martin Valiente Ainz
- *
  * Contains the get methods to be used by a model.
+ * 
+ * @author Martin Valiente Ainz
  *
  */
 public interface Model {

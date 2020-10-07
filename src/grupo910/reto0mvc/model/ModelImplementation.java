@@ -6,7 +6,7 @@
 package grupo910.reto0mvc.model;
 
 /**
- *
+ * Model implememtation for getting the greeting from a String
  * @author TINI
  */
 public class ModelImplementation implements Model {

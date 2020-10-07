@@ -1,10 +1,9 @@
 package grupo910.reto0mvc.view;
 
 /**
- *
- * @author Martin Valiente and Kerman Rodríguez
- *
  * Contains view methods to be used by a controller.
+ * 
+ * @author Martin Valiente and Kerman Rodríguez
  *
  */
 public interface View {
