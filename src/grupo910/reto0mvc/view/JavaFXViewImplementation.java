@@ -6,6 +6,7 @@
 package grupo910.reto0mvc.view;
 
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
@@ -24,7 +25,12 @@ public class JavaFXViewImplementation extends Application implements View {
     public void start(Stage primaryStage) {
 
         lbl = new Label();
-
+        String greeting = getParameters().getRaw().toString();
+        greeting = greeting.replace("[", "");
+        greeting = greeting.replace("]", "");
+        
+        
+        lbl.setText(greeting);
         StackPane root = new StackPane();
         root.getChildren().add(lbl);
 
@@ -41,6 +47,6 @@ public class JavaFXViewImplementation extends Application implements View {
      */
     @Override
     public void showGreeting(String greeting) {
-        launch();
+        launch(greeting);
     }
 }
