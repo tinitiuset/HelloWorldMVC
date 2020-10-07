@@ -6,16 +6,18 @@
 package grupo910.reto0mvc.view;
 
 /**
- * @author Martin Valiente and Kerman Rodríguez
- * View implementation that shows the greeting in a text type UI.
+ * @author Martin Valiente and Kerman Rodríguez View implementation that shows
+ * the greeting in a text type UI.
  */
-public class ViewImplementation implements View{
-    /** 
+public class ViewImplementation implements View {
+
+    /**
      * Shows a greeting in UI.
+     *
      * @param greeting A String containing the greeting to be shown.
      */
     @Override
-    public void showGreeting (String greeting){
+    public void showGreeting(String greeting) {
         System.out.println(greeting);
     }
 }

@@ -1,4 +1,3 @@
-
 package grupo910.reto0mvc.database;
 
 import java.sql.Connection;
@@ -11,10 +10,12 @@ import java.util.ResourceBundle;
 
 /**
  * Class that manages the database using different methods.
+ *
  * @author Kerman Rodríguez and Martín Valiente
  */
 public class DAO {
-     // Attributes
+    // Attributes
+
     private Connection con = null;
     private Properties props;
     private Statement stmt = null;
@@ -39,9 +40,11 @@ public class DAO {
         this.greeting = this.configFile.getString("Greeting");
         chosen_greeting = Integer.parseInt(greeting);
     }
+
     /**
      * Method to start the connection to the database
-     * @throws Exception 
+     *
+     * @throws Exception
      */
     private void connect() throws Exception {
         try {
@@ -52,9 +55,11 @@ public class DAO {
             throw new Exception("SQL error" + e.getMessage());
         }
     }
+
     /**
      * Method to stop the connection to the database
-     * @throws Exception 
+     *
+     * @throws Exception
      */
     private void disconnect() throws Exception {
         try {
@@ -68,21 +73,23 @@ public class DAO {
             throw new Exception("SQL error" + e.getMessage());
         }
     }
-     /**
-      * A simple method that searches the database for the greeting
-      * @return the needed greeting
-      * @throws Exception 
-      */
-     public String selectGreeting() throws Exception {
+
+    /**
+     * A simple method that searches the database for the greeting
+     *
+     * @return the needed greeting
+     * @throws Exception
+     */
+    public String selectGreeting() throws Exception {
         String selected_greeting = "";
         this.connect();
-        String select = "SELECT * FROM Greeting ORDER BY greeting LIMIT 1 OFFSET "+(chosen_greeting-1)+";";
+        String select = "SELECT * FROM Greeting ORDER BY greeting LIMIT 1 OFFSET " + (chosen_greeting - 1) + ";";
         ResultSet rs = stmt.executeQuery(select);
-        
-        while(rs.next()) {
+
+        while (rs.next()) {
             selected_greeting = rs.getString(1);
         }
-        
+
         this.disconnect();
         return selected_greeting;
     }
